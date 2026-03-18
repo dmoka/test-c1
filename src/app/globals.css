@@ -1,0 +1,260 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Design system colors from MASTER.md */
+    --color-primary: #0891B2;
+    --color-secondary: #22D3EE;
+    --color-cta: #22C55E;
+    --color-background: #ECFEFF;
+    --color-text: #164E63;
+    
+    /* Converted to HSL for Tailwind */
+    --background: 193 100% 96%; /* #ECFEFF */
+    --foreground: 197 100% 21%; /* #164E63 */
+    --primary: 189 81% 36%; /* #0891B2 */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 186 100% 50%; /* #22D3EE */
+    --secondary-foreground: 197 100% 21%;
+    --accent: 142 69% 46%; /* #22C55E */
+    --accent-foreground: 0 0% 100%;
+    --card: 193 100% 97%;
+    --card-foreground: 197 100% 21%;
+    --muted: 193 100% 94%;
+    --muted-foreground: 197 50% 35%;
+    --border: 193 50% 85%;
+    --input: 193 50% 85%;
+    --ring: 189 81% 36%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --radius: 0.5rem;
+    
+    /* Typography from MASTER.md */
+    --font-heading: 'Inter', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    
+    /* Spacing from MASTER.md */
+    --space-xs: 0.25rem;   /* 4px */
+    --space-sm: 0.5rem;    /* 8px */
+    --space-md: 1rem;      /* 16px */
+    --space-lg: 1.5rem;    /* 24px */
+    --space-xl: 2rem;      /* 32px */
+    --space-2xl: 3rem;     /* 48px */
+    --space-3xl: 4rem;     /* 64px */
+    
+    /* Shadows from MASTER.md */
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+    --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+    --shadow-xl: 0 20px 25px rgba(0,0,0,0.15);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+@layer utilities {
+  /* Button utilities following MASTER.md design system */
+  .btn-calculator {
+    @apply bg-card text-foreground font-semibold rounded-lg transition-all duration-200 ease-in-out;
+    @apply shadow-md hover:shadow-lg cursor-pointer select-none;
+    @apply flex items-center justify-center text-lg;
+    @apply border-2 border-transparent;
+    /* Follow design system: padding 12px 24px, border-radius 8px */
+    padding: 12px 24px;
+    border-radius: 8px;
+  }
+  
+  .btn-calculator:hover {
+    transform: translateY(-1px);
+    opacity: 0.9;
+  }
+  
+  .btn-calculator:active {
+    transform: translateY(-1px) scale(0.98);
+    transition-duration: 100ms;
+  }
+  
+  .btn-operation {
+    /* Primary button style from MASTER.md */
+    background: var(--color-primary);
+    color: white;
+    font-weight: 600;
+  }
+  
+  .btn-operation:hover {
+    background: var(--color-primary);
+    opacity: 0.9;
+    transform: translateY(-1px);
+  }
+  
+  .btn-equals {
+    /* CTA button style from MASTER.md */
+    background: var(--color-cta);
+    color: white;
+    font-weight: 600;
+  }
+  
+  .btn-equals:hover {
+    background: var(--color-cta);
+    opacity: 0.9;
+    transform: translateY(-1px);
+  }
+  
+  .btn-clear {
+    @apply bg-destructive text-destructive-foreground font-semibold;
+  }
+  
+  .btn-clear:hover {
+    @apply bg-destructive;
+    opacity: 0.9;
+    transform: translateY(-1px);
+  }
+  
+  /* Calculator display with enhanced styling */
+  .calculator-display {
+    @apply bg-card border border-border rounded-lg text-right font-mono;
+    @apply shadow-md text-card-foreground font-medium;
+    /* Enhanced padding and typography */
+    padding: var(--space-lg);
+    font-size: 2rem;
+    line-height: 1.2;
+    border-radius: 12px;
+  }
+  
+  /* Smooth transitions matching design system (200ms) */
+  .transition-smooth {
+    transition: all 200ms ease;
+  }
+  
+  /* Enhanced responsive design for all breakpoints */
+  /* Mobile: 375px */
+  @media (max-width: 375px) {
+    .btn-calculator {
+      min-height: 44px;
+      min-width: 44px;
+      font-size: 1rem;
+      padding: 8px 16px;
+    }
+    
+    .calculator-display {
+      font-size: 1.5rem;
+      padding: var(--space-md);
+    }
+  }
+  
+  /* Mobile to Tablet: 376px - 768px */
+  @media (min-width: 376px) and (max-width: 768px) {
+    .btn-calculator {
+      min-height: 48px;
+      min-width: 48px;
+      font-size: 1.125rem;
+    }
+    
+    .calculator-display {
+      font-size: 1.75rem;
+    }
+  }
+  
+  /* Tablet: 769px - 1024px */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .btn-calculator {
+      min-height: 52px;
+      min-width: 52px;
+      font-size: 1.25rem;
+    }
+    
+    .calculator-display {
+      font-size: 2rem;
+    }
+  }
+  
+  /* Desktop: 1025px - 1440px */
+  @media (min-width: 1025px) and (max-width: 1440px) {
+    .btn-calculator {
+      min-height: 56px;
+      min-width: 56px;
+      font-size: 1.25rem;
+    }
+    
+    .calculator-display {
+      font-size: 2rem;
+    }
+  }
+  
+  /* Large Desktop: 1441px+ */
+  @media (min-width: 1441px) {
+    .btn-calculator {
+      min-height: 58px;
+      min-width: 58px;
+      font-size: 1.375rem;
+    }
+    
+    .calculator-display {
+      font-size: 2.25rem;
+    }
+  }
+  
+  /* Enhanced focus states for accessibility */
+  .btn-calculator:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(8, 145, 178, 0.2);
+    z-index: 10;
+    position: relative;
+  }
+  
+  /* Enhanced title styling */
+  .calculator-title {
+    background: linear-gradient(135deg, var(--color-text) 0%, var(--color-primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: subtle-glow 3s ease-in-out infinite alternate;
+  }
+  
+  @keyframes subtle-glow {
+    0% { filter: brightness(1); }
+    100% { filter: brightness(1.05); }
+  }
+  
+  /* Large section spacing per MASTER.md (48px+ gaps) */
+  .large-section-gap {
+    margin-bottom: var(--space-2xl); /* 48px */
+  }
+  
+  .large-section-gap-sm {
+    margin-bottom: var(--space-3xl); /* 64px */
+  }
+  
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    .btn-calculator,
+    .calculator-title {
+      transition: none;
+      animation: none;
+    }
+    
+    .btn-calculator:hover {
+      transform: none;
+    }
+    
+    .btn-calculator:active {
+      transform: none;
+    }
+  }
+}

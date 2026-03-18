@@ -1,0 +1,27 @@
+{
+  "colors": {
+    "background": "#ffffff",
+    "foreground": "#1a1a1a",
+    "primary": "#2563eb",
+    "primaryForeground": "#ffffff",
+    "secondary": "#f1f5f9",
+    "secondaryForeground": "#334155",
+    "accent": "#e2e8f0",
+    "accentForeground": "#1e293b",
+    "card": "#fafafa",
+    "cardForeground": "#1a1a1a",
+    "muted": "#f8fafc",
+    "mutedForeground": "#64748b",
+    "border": "#e2e8f0",
+    "input": "#e2e8f0",
+    "ring": "#2563eb",
+    "destructive": "#dc2626",
+    "destructiveForeground": "#ffffff"
+  },
+  "fonts": {
+    "heading": "DM Sans",
+    "body": "Source Sans Pro",
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Source+Sans+Pro:wght@400;500;600&display=swap"
+  },
+  "radius": "0.5rem"
+}
