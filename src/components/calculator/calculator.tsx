@@ -106,7 +106,7 @@ export function Calculator() {
             lineHeight: '1.1'
           }}
         >
-          Hello Dani Calculator
+          A superior calculator
         </h1>
         <p 
           className="text-base sm:text-lg text-muted-foreground mt-3 sm:mt-4 transition-all duration-200 ease-out"

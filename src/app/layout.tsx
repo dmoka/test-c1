@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Hello Dani Calculator",
+  title: "A superior calculator",
   description: "Simple, clean web calculator for basic arithmetic operations",
 };
 
