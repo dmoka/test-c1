@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Best Niki Super",
+  title: "Best Jason Super",
   description: "Simple, clean web calculator for basic arithmetic operations",
 };
 
