@@ -106,7 +106,7 @@ export function Calculator() {
             lineHeight: '1.1'
           }}
         >
-          AI Munkatárs működik — v2-mnulzfg2
+          AI Munkatárs működik — v2-mnum3u4z
         </h1>
         <p 
           className="text-base sm:text-lg text-muted-foreground mt-3 sm:mt-4 transition-all duration-200 ease-out"
