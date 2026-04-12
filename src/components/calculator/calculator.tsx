@@ -1,3 +1,4 @@
+// AI Munkatárs VPS Teszt sikeres — a026010b
 "use client";
 
 import { useState, useEffect } from "react";
