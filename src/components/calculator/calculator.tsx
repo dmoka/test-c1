@@ -1,3 +1,4 @@
+// VPS push teszt sikeres — d6efcea5
 // AI Munkatárs VPS Teszt sikeres — a026010b
 "use client";
 
