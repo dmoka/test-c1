@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "2027 Uj cim",
-  description: "Simple, clean web calculator for basic arithmetic operations",
+  description: "Egyszerű, tiszta webes számológép alapvető matematikai műveletekhez.",
 };
 
 export default function RootLayout({
