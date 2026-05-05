@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "2027 Uj cim",
+  title: "Számológép — AI Munkatárs",
   description: "Egyszerű, tiszta webes számológép alapvető matematikai műveletekhez.",
 };
 
