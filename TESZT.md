@@ -1,1 +1,1 @@
-AI Munkatárs E2E teszt — 2026-05-05 v5
+AI Munkatárs E2E v6 — soul-injection 2026-05-05
